@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.burgerBox = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -80,12 +80,12 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Number of Drinks";
             // 
-            // textBox1
+            // burgerBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.burgerBox.Location = new System.Drawing.Point(136, 46);
+            this.burgerBox.Name = "burgerBox";
+            this.burgerBox.Size = new System.Drawing.Size(100, 20);
+            this.burgerBox.TabIndex = 3;
             // 
             // textBox2
             // 
@@ -119,6 +119,7 @@
             this.calculateButton.TabIndex = 7;
             this.calculateButton.Text = "Calculate Totals";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // label5
             // 
@@ -171,6 +172,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Calculate Change";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label9
             // 
@@ -234,6 +236,7 @@
             this.printButton.TabIndex = 20;
             this.printButton.Text = "Print Receipt";
             this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // newButton
             // 
@@ -243,6 +246,7 @@
             this.newButton.TabIndex = 21;
             this.newButton.Text = "New Order";
             this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // Form1
             // 
@@ -267,7 +271,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.burgerBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -284,7 +288,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox burgerBox;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
