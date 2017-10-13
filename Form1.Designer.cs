@@ -33,16 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.burgerBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.friesBox = new System.Windows.Forms.TextBox();
+            this.drinkBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.calculateButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cashBox = new System.Windows.Forms.TextBox();
+            this.changeButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.changeLabel = new System.Windows.Forms.Label();
             this.subTotalLabel = new System.Windows.Forms.Label();
@@ -87,19 +87,19 @@
             this.burgerBox.Size = new System.Drawing.Size(100, 20);
             this.burgerBox.TabIndex = 3;
             // 
-            // textBox2
+            // friesBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.friesBox.Location = new System.Drawing.Point(136, 83);
+            this.friesBox.Name = "friesBox";
+            this.friesBox.Size = new System.Drawing.Size(100, 20);
+            this.friesBox.TabIndex = 4;
             // 
-            // textBox3
+            // drinkBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.drinkBox.Location = new System.Drawing.Point(136, 119);
+            this.drinkBox.Name = "drinkBox";
+            this.drinkBox.Size = new System.Drawing.Size(100, 20);
+            this.drinkBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -157,22 +157,22 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Amount Tendered";
             // 
-            // textBox4
+            // cashBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(136, 328);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 12;
+            this.cashBox.Location = new System.Drawing.Point(136, 328);
+            this.cashBox.Name = "cashBox";
+            this.cashBox.Size = new System.Drawing.Size(100, 20);
+            this.cashBox.TabIndex = 12;
             // 
-            // button1
+            // changeButton
             // 
-            this.button1.Location = new System.Drawing.Point(85, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Calculate Change";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.changeButton.Location = new System.Drawing.Point(85, 369);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(75, 23);
+            this.changeButton.TabIndex = 13;
+            this.changeButton.Text = "Calculate Change";
+            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // label9
             // 
@@ -197,27 +197,26 @@
             this.subTotalLabel.AutoSize = true;
             this.subTotalLabel.Location = new System.Drawing.Point(133, 205);
             this.subTotalLabel.Name = "subTotalLabel";
-            this.subTotalLabel.Size = new System.Drawing.Size(74, 13);
+            this.subTotalLabel.Size = new System.Drawing.Size(0, 13);
             this.subTotalLabel.TabIndex = 16;
-            this.subTotalLabel.Text = "subTotalLabel";
             // 
             // taxLabel
             // 
             this.taxLabel.AutoSize = true;
             this.taxLabel.Location = new System.Drawing.Point(136, 236);
             this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(47, 13);
+            this.taxLabel.Size = new System.Drawing.Size(10, 13);
             this.taxLabel.TabIndex = 17;
-            this.taxLabel.Text = "taxLabel";
+            this.taxLabel.Text = " ";
             // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Location = new System.Drawing.Point(136, 266);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(53, 13);
+            this.totalLabel.Size = new System.Drawing.Size(10, 13);
             this.totalLabel.TabIndex = 18;
-            this.totalLabel.Text = "totalLabel";
+            this.totalLabel.Text = " ";
             // 
             // label10
             // 
@@ -261,16 +260,16 @@
             this.Controls.Add(this.subTotalLabel);
             this.Controls.Add(this.changeLabel);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.cashBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.drinkBox);
+            this.Controls.Add(this.friesBox);
             this.Controls.Add(this.burgerBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -289,16 +288,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox burgerBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox friesBox;
+        private System.Windows.Forms.TextBox drinkBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox cashBox;
+        private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Label subTotalLabel;
