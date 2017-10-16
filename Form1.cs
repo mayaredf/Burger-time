@@ -71,9 +71,11 @@ namespace Burger_time
         private void printButton_Click(object sender, EventArgs e)
         {
             Graphics formGraphics = this.CreateGraphics();
-            Font drawFont = new Font("Consolas", 26);
+            Font drawFont = new Font("Consolas", 10);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
-            formGraphics.DrawString("Reciept", drawFont, drawBrush, 60, 40);
+            formGraphics.DrawString("Burger Time Inc.", drawFont, drawBrush, 320, 40);
+            Thread.Sleep(200);
+            formGraphics.DrawString("Order Number 346", drawFont, drawBrush, 270, 80);
         }
 
         private void newButton_Click(object sender, EventArgs e)
