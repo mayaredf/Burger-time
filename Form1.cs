@@ -73,13 +73,58 @@ namespace Burger_time
             Graphics formGraphics = this.CreateGraphics();
             Font drawFont = new Font("Consolas", 10);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
+            SolidBrush drawBrush2 = new SolidBrush(Color.White);
+            Pen drawPen = new Pen(Color.White);
+
+            formGraphics.DrawRectangle(drawPen, 260, 40, 270, 360);
+            formGraphics.FillRectangle(drawBrush2, 260, 40, 270, 360);
+
             formGraphics.DrawString("Burger Time Inc.", drawFont, drawBrush, 320, 40);
-            Thread.Sleep(200);
+            Thread.Sleep(300);
             formGraphics.DrawString("Order Number 346", drawFont, drawBrush, 270, 80);
+            Thread.Sleep(300);
+            formGraphics.DrawString("October 16, 2017", drawFont, drawBrush, 270, 100);
+            Thread.Sleep(600);
+            formGraphics.DrawString("Burgers x? -------------@ $2.49", drawFont, drawBrush, 270, 140);
+            Thread.Sleep(300);
+            formGraphics.DrawString("Fries x? ---------------@ $1.89", drawFont, drawBrush, 270, 160);
+            Thread.Sleep(300);
+            formGraphics.DrawString("Drinks x? --------------@ $0.99", drawFont, drawBrush, 270, 180);
+            Thread.Sleep(600);
+            formGraphics.DrawString("Subtotal------------------$?.??", drawFont, drawBrush, 270, 220);
+            Thread.Sleep(300);
+            formGraphics.DrawString("Tax-----------------------$?.??", drawFont, drawBrush, 270, 240);
+            Thread.Sleep(300);
+            formGraphics.DrawString("Total---------------------$?.??", drawFont, drawBrush, 270, 260);
+            Thread.Sleep(600);
+            formGraphics.DrawString("Tendered------------------$?.??", drawFont, drawBrush, 270, 300);
+            Thread.Sleep(300);
+            formGraphics.DrawString("Change--------------------$?.??", drawFont, drawBrush, 270, 320);
+            Thread.Sleep(600);
+            formGraphics.DrawString("Have a Nice Day", drawFont, drawBrush, 270, 360);
         }
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            burgerBox.Text = "";
+            friesBox.Text = "";
+            drinkBox.Text = "";
+            subTotalLabel.Text = "";
+            taxLabel.Text = "";
+            totalLabel.Text = "";
+            cashBox.Text = "";
+            changeLabel.Text = "";
+
+            burgerNumber = 0;
+            friesNumber = 0;
+            drinkNumber = 0;
+            subTotal = 0;
+            taxTotal = 0;
+            total = 0;
+            cashNumber = 0;
+            change = 0;
+
+
 
         }
     }

@@ -188,9 +188,9 @@
             this.changeLabel.AutoSize = true;
             this.changeLabel.Location = new System.Drawing.Point(133, 413);
             this.changeLabel.Name = "changeLabel";
-            this.changeLabel.Size = new System.Drawing.Size(69, 13);
+            this.changeLabel.Size = new System.Drawing.Size(10, 13);
             this.changeLabel.TabIndex = 15;
-            this.changeLabel.Text = "changeLabel";
+            this.changeLabel.Text = " ";
             // 
             // subTotalLabel
             // 
@@ -251,6 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(536, 495);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.printButton);
