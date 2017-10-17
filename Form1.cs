@@ -110,7 +110,7 @@ namespace Burger_time
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            //clearing text
+            //clearing text for new order
             burgerBox.Text = "";
             friesBox.Text = "";
             drinkBox.Text = "";
@@ -120,7 +120,7 @@ namespace Burger_time
             cashBox.Text = "";
             changeLabel.Text = "";
 
-            //clearing variables
+            //clearing variables for new order
             burgerNumber = 0;
             friesNumber = 0;
             drinkNumber = 0;
