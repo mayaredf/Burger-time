@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 //This program was made by Maya Redford-Haines
 //October 10th, 2017
+//This program demonstrates variables, input and output.
 
 
 namespace Burger_time
@@ -18,6 +19,7 @@ namespace Burger_time
 
         
     {
+        //creating variables
         const double BURGER_BASE_COST = 2.49;
         int burgerNumber = 0;
         const double FRIES_BASE_COST = 1.89;
@@ -40,12 +42,12 @@ namespace Burger_time
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-
+            //converting to integer
             burgerNumber = Convert.ToInt16(burgerBox.Text);
             friesNumber = Convert.ToInt16(friesBox.Text);
             drinkNumber = Convert.ToInt16(drinkBox.Text);
 
-
+            //calculating
             subTotal = burgerNumber * BURGER_BASE_COST + friesNumber * FRIES_BASE_COST + drinkNumber * DRINK_BASE_COST;
             taxTotal = subTotal * tax;
             total = subTotal + taxTotal;
@@ -60,8 +62,9 @@ namespace Burger_time
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            //converting to integer
             cashNumber = Convert.ToInt16(cashBox.Text);
-
+            //getting change
             change = cashNumber - total;
             changeLabel.Text = change.ToString("C");
          
@@ -70,6 +73,7 @@ namespace Burger_time
 
         private void printButton_Click(object sender, EventArgs e)
         {
+            //creating graphics
             Graphics formGraphics = this.CreateGraphics();
             Font drawFont = new Font("Consolas", 10);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
@@ -78,7 +82,7 @@ namespace Burger_time
 
             formGraphics.DrawRectangle(drawPen, 260, 40, 270, 360);
             formGraphics.FillRectangle(drawBrush2, 260, 40, 270, 360);
-
+            //printing reciept
             formGraphics.DrawString("Burger Time Inc.", drawFont, drawBrush, 320, 40);
             Thread.Sleep(300);
             formGraphics.DrawString("Order Number 346", drawFont, drawBrush, 270, 80);
@@ -106,6 +110,7 @@ namespace Burger_time
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            //clearing text
             burgerBox.Text = "";
             friesBox.Text = "";
             drinkBox.Text = "";
@@ -115,6 +120,7 @@ namespace Burger_time
             cashBox.Text = "";
             changeLabel.Text = "";
 
+            //clearing variables
             burgerNumber = 0;
             friesNumber = 0;
             drinkNumber = 0;
@@ -123,7 +129,7 @@ namespace Burger_time
             total = 0;
             cashNumber = 0;
             change = 0;
-
+            
 
 
         }
